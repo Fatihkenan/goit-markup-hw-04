@@ -286,8 +286,7 @@ img {
   width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
-  display: flex;
-  align-items: baseline;
+  
 }
 .footer {
   background-color: var(--navy-blue);
@@ -429,4 +428,8 @@ img {
 }
 .footer-social-media-list-a:focus{
   background-color: var(--renk);
+}
+.footer-container{
+  display: flex;
+  align-items: baseline;
 }
