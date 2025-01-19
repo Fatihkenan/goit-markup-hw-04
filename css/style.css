@@ -6,6 +6,7 @@
   --ocean: #404bbf;
   --cloud: #f4f4fd;
   --cornflower: #e7e9fc;
+  --lightslate: #8E8F99;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -49,18 +50,31 @@ img {
   color: var(--iris);
 }
 .navbar-a-tags {
+  position: relative;
+  color: var(--ocean);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
   padding: 24px 0;
+  transition: 250ms cubic-bezier(0.4,0,0.2,1);
 }
 .navbar-a-tags:hover {
   color: var(--ocean);
 }
 .navbar-a-tags:focus {
   color: var(--ocean);
+}
+.navbar-a-tags::after{
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: var(--ocean);
+  border-radius: 2px;
 }
 .navbar-address {
   font-style: normal;
@@ -70,6 +84,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+  transition: 250ms cubic-bezier(0.4,0,0.2,1);
 }
 .navbar-address-a-tags:hover {
   color: var(--ocean);
@@ -78,7 +93,13 @@ img {
   color: var(--ocean);
 }
 /* header */
-
+.main-header{
+  background-image: linear-gradient(rgba(46,47,66,0.7),rgba(46,47,66,0.7)),url(../images/people-office.jpg);
+  max-width: 1440px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .main-header-title {
   font-size: 56px;
   line-height: 1.07;
@@ -103,6 +124,7 @@ img {
   height: 56px;
   border: none;
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4,0,0,2.1);
 }
 .main-header-btn:hover {
   background-color: var(--ocean);
@@ -165,6 +187,7 @@ img {
   background-color: var(--white);
   width: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .our-team-list-article {
   padding: 32px 0;
@@ -277,8 +300,58 @@ img {
 }
 .header-navbar {
   border-bottom: 1px solid var(--cornflower);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .main-header {
   background-color: var(--navy-blue);
   padding: 188px 0;
+}
+.icon-v1-background{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: var(--cloud);
+  border-radius: 4px;
+  border: 1px solid var(--lightslate);
+  margin-bottom: 8px;
+}
+.icon-v1,
+.icon-v2,
+.icon-v3,
+.icon-v4{
+  width: 64px;
+  height: 64px;
+}
+.social-media{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.instagram-icon{
+  width: 40px;
+  height: 40px;
+}
+.instagram{
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.instagram:hover{
+  background-color: var(--ocean);
+}
+.instagram:focus{
+  background-color: var(--ocean);
+}
+.icon-v5,
+.icon-v6,
+.icon-v7,
+.icon-v8{
+  width: 16px;
+  height: 16px;
+  fill: var(--cloud);
 }
